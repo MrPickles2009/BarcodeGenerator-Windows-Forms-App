@@ -16,18 +16,62 @@ namespace BarcodeGenerator
         {
             InitializeComponent();
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void submitButton_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void barcodeRange1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void barcodeRange2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lastRange1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lastRange2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rangeCount_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lastSubmitDate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }
