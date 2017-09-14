@@ -42,30 +42,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // Form1
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(703, 443);
-            this.Controls.Add(this.submitButton);
-            this.Controls.Add(this.barcodeRange1);
-            this.Controls.Add(this.barcodeRange2);
-            this.Controls.Add(this.lastRange1);
-            this.Controls.Add(this.lastRange2);
-            this.Controls.Add(this.rangeCount);
-            this.Controls.Add(this.lastSubmitDate);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label4);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Barcode Generator";
-            this.Text = "Barcode Generator";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-            // 
             // submitButton
             // 
             this.submitButton.Location = new System.Drawing.Point(286, 270);
@@ -378,6 +354,34 @@
             this.label4.TabIndex = 13;
             this.label4.Text = "to";
             this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ClientSize = new System.Drawing.Size(703, 443);
+            this.Controls.Add(this.submitButton);
+            this.Controls.Add(this.barcodeRange1);
+            this.Controls.Add(this.barcodeRange2);
+            this.Controls.Add(this.lastRange1);
+            this.Controls.Add(this.lastRange2);
+            this.Controls.Add(this.rangeCount);
+            this.Controls.Add(this.lastSubmitDate);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Barcode Generator";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

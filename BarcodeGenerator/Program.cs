@@ -20,7 +20,7 @@ namespace BarcodeGenerator
             Application.Run(new Form1());
         }
         HttpClient client;
-        ComboBox range1 = System.Windows.Forms.comboBox1;
+        //ComboBox range1 = System.Windows.Forms.comboBox1;
         public async Task<T> GetAsync<T>(string url)
         {
             object barcodeData = 51000001687;
