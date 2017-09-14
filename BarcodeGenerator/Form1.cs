@@ -28,12 +28,15 @@ namespace BarcodeGenerator
 
         private void barcodeRange1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if (barcodeRange2.SelectedItem != null)
+            {
+                rangeCount.Text = $"{Convert.ToInt64(barcodeRange2.SelectedItem) - Convert.ToInt64(barcodeRange1.SelectedItem) + 1}";
+            }
         }
 
         private void barcodeRange2_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            rangeCount.Text = $"{Convert.ToInt64(barcodeRange2.SelectedItem) - Convert.ToInt64(barcodeRange1.SelectedItem) + 1}";
         }
 
         private void lastRange1_Click(object sender, EventArgs e)

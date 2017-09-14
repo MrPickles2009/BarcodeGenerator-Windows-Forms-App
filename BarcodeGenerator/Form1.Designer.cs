@@ -297,11 +297,11 @@
             // rangeCount
             // 
             this.rangeCount.AutoSize = true;
-            this.rangeCount.Location = new System.Drawing.Point(359, 79);
+            this.rangeCount.Location = new System.Drawing.Point(353, 79);
             this.rangeCount.Name = "rangeCount";
             this.rangeCount.Size = new System.Drawing.Size(13, 13);
             this.rangeCount.TabIndex = 10;
-            this.rangeCount.Text = "8";
+            this.rangeCount.Text = "0";
             this.rangeCount.Click += new System.EventHandler(this.rangeCount_Click);
             // 
             // lastSubmitDate
