@@ -31,17 +31,9 @@ namespace BarcodeGenerator
             lastRange1.Text = $"{Convert.ToInt64(barcodeRange1.SelectedItem)}";
             lastRange2.Text = $"{Convert.ToInt64(barcodeRange2.SelectedItem)}";
 
-            HttpClient client;
-            async Task<T> GetAsync<T>(string url)
-            {
-                object barcodeData = 51000001687;
-                var barcodeUrl = $"barcode.tec-it.com/barcode.ashx?translate-esc=off&data={barcodeData}&code=UPCA&authentication=None&ssid=Networkname&password=&unit=Fit&dpi=96&imagetype=Gif&rotation=0&color=000000&bgcolor=FFFFFF&qunit=Mm&quiet=0&eclevel=L";
+            object barcodeData = $"{Convert.ToInt64(barcodeRange1.SelectedItem)}";
+            var barcodeUrl = $"barcode.tec-it.com/barcode.ashx?translate-esc=off&data={barcodeData}&code=UPCA&authentication=None&ssid=Networkname&password=&unit=Fit&dpi=96&imagetype=Gif&rotation=0&color=000000&bgcolor=FFFFFF&qunit=Mm&quiet=0&eclevel=L";
 
-                T result = default(T);
-
-                HttpResponseMessage response = await client.GetAsync(barcodeUrl);
-                return result;
-            }
             try
             {
                 Document document = new Document();
@@ -53,7 +45,7 @@ namespace BarcodeGenerator
             }
             catch (Exception exp)
             {
-
+                MessageBox.Show(exp.Message);
             }
         }
 
