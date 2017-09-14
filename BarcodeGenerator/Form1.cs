@@ -8,6 +8,9 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System.IO;
 
 namespace BarcodeGenerator
 {
@@ -38,6 +41,19 @@ namespace BarcodeGenerator
 
                 HttpResponseMessage response = await client.GetAsync(barcodeUrl);
                 return result;
+            }
+            try
+            {
+                Document document = new Document();
+                PdfWriter.GetInstance(document, new FileStream("./Barcodes.pdf", FileMode.Create));
+                document.Open();
+                Paragraph p = new Paragraph("Barcodes:");
+                document.Add(p);
+                document.Close();
+            }
+            catch (Exception exp)
+            {
+
             }
         }
 
