@@ -309,9 +309,9 @@
             this.lastSubmitDate.AutoSize = true;
             this.lastSubmitDate.Location = new System.Drawing.Point(293, 375);
             this.lastSubmitDate.Name = "lastSubmitDate";
-            this.lastSubmitDate.Size = new System.Drawing.Size(65, 13);
+            this.lastSubmitDate.Size = new System.Drawing.Size(110, 13);
             this.lastSubmitDate.TabIndex = 12;
-            this.lastSubmitDate.Text = "09/08/2017";
+            this.lastSubmitDate.Text = "13/09/2017 10:00:50";
             this.lastSubmitDate.Click += new System.EventHandler(this.lastSubmitDate_Click);
             // 
             // label1
