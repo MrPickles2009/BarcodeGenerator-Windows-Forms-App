@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using iTextSharp.text;
-using iTextSharp.text.pdf;
+﻿using PdfSharp.Drawing;
+using PdfSharp.Drawing.Layout;
+using PdfSharp.Pdf;
+using System;
+using System.Diagnostics;
 using System.IO;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace BarcodeGenerator
 {
@@ -19,6 +14,7 @@ namespace BarcodeGenerator
         public Form1()
         {
             InitializeComponent();
+            barcodeRange1.SelectedItem = barcodeRange1.Top;
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -33,15 +29,131 @@ namespace BarcodeGenerator
 
             object barcodeData = $"{Convert.ToInt64(barcodeRange1.SelectedItem)}";
             var barcodeUrl = $"barcode.tec-it.com/barcode.ashx?translate-esc=off&data={barcodeData}&code=UPCA&authentication=None&ssid=Networkname&password=&unit=Fit&dpi=96&imagetype=Gif&rotation=0&color=000000&bgcolor=FFFFFF&qunit=Mm&quiet=0&eclevel=L";
+            //int r1 = Int32.Parse($"{barcodeRange1.SelectedItem}");
+
+            var rangeValues = Enumerable.Range(1849, Int32.Parse(rangeCount.Text));
 
             try
             {
-                Document document = new Document();
-                PdfWriter.GetInstance(document, new FileStream("./Barcodes.pdf", FileMode.Create));
-                document.Open();
-                Paragraph p = new Paragraph("Barcodes:");
-                document.Add(p);
-                document.Close();
+                PdfDocument document = new PdfDocument();
+                document.Info.Title = "Barcodes for JMU EFEX Lending Library";
+                PdfPage page = document.AddPage();
+                page.Size = PdfSharp.PageSize.Letter;
+                XGraphics gfx = XGraphics.FromPdfPage(page);
+                XTextFormatter tf = new XTextFormatter(gfx);
+                XFont titleFont = new XFont("Verdana", 20, XFontStyle.Underline);
+                XFont barcodeFont = new XFont("Verdana", 14, XFontStyle.Regular);
+                gfx.DrawString("Barcodes", titleFont, XBrushes.Black, new XRect(0, 0, page.Width, page.Height), XStringFormats.TopCenter);
+                //for (int i = 0; i < Int32.Parse(rangeCount.Text); i++)
+                //{
+                //    gfx.DrawString("I am a barcode", barcodeFont, XBrushes.Black, new XRect(0, 0, page.Width, page.Height), XStringFormats.Center);
+                //}
+
+                //US Letter Page Dimensions: 612 * 792
+                string text = "I am a barcode";
+                XRect rect = new XRect(12, 36, 288, 72);
+                gfx.DrawRectangle(XBrushes.White, rect);
+                tf.Alignment = XParagraphAlignment.Left;
+                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                rect = new XRect(12, 108, 288, 72);
+                gfx.DrawRectangle(XBrushes.White, rect);
+                tf.Alignment = XParagraphAlignment.Left;
+                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                rect = new XRect(12, 180, 288, 72);
+                gfx.DrawRectangle(XBrushes.White, rect);
+                tf.Alignment = XParagraphAlignment.Left;
+                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                rect = new XRect(12, 252, 288, 72);
+                gfx.DrawRectangle(XBrushes.White, rect);
+                tf.Alignment = XParagraphAlignment.Left;
+                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                rect = new XRect(12, 324, 288, 72);
+                gfx.DrawRectangle(XBrushes.White, rect);
+                tf.Alignment = XParagraphAlignment.Left;
+                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                rect = new XRect(12, 396, 288, 72);
+                gfx.DrawRectangle(XBrushes.White, rect);
+                tf.Alignment = XParagraphAlignment.Left;
+                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                rect = new XRect(12, 468, 288, 72);
+                gfx.DrawRectangle(XBrushes.White, rect);
+                tf.Alignment = XParagraphAlignment.Left;
+                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                rect = new XRect(12, 540, 288, 72);
+                gfx.DrawRectangle(XBrushes.White, rect);
+                tf.Alignment = XParagraphAlignment.Left;
+                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                rect = new XRect(12, 612, 288, 72);
+                gfx.DrawRectangle(XBrushes.White, rect);
+                tf.Alignment = XParagraphAlignment.Left;
+                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                rect = new XRect(12, 684, 288, 72);
+                gfx.DrawRectangle(XBrushes.White, rect);
+                tf.Alignment = XParagraphAlignment.Left;
+                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                rect = new XRect(313, 36, 288, 72);
+                gfx.DrawRectangle(XBrushes.White, rect);
+                tf.Alignment = XParagraphAlignment.Left;
+                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                rect = new XRect(313, 108, 288, 72);
+                gfx.DrawRectangle(XBrushes.White, rect);
+                tf.Alignment = XParagraphAlignment.Left;
+                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                rect = new XRect(313, 180, 288, 72);
+                gfx.DrawRectangle(XBrushes.White, rect);
+                tf.Alignment = XParagraphAlignment.Left;
+                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                rect = new XRect(313, 252, 288, 72);
+                gfx.DrawRectangle(XBrushes.White, rect);
+                tf.Alignment = XParagraphAlignment.Left;
+                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                rect = new XRect(313, 324, 288, 72);
+                gfx.DrawRectangle(XBrushes.White, rect);
+                tf.Alignment = XParagraphAlignment.Left;
+                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                rect = new XRect(313, 396, 288, 72);
+                gfx.DrawRectangle(XBrushes.White, rect);
+                tf.Alignment = XParagraphAlignment.Left;
+                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                rect = new XRect(313, 468, 288, 72);
+                gfx.DrawRectangle(XBrushes.White, rect);
+                tf.Alignment = XParagraphAlignment.Left;
+                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                rect = new XRect(313, 540, 288, 72);
+                gfx.DrawRectangle(XBrushes.White, rect);
+                tf.Alignment = XParagraphAlignment.Left;
+                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                rect = new XRect(313, 612, 288, 72);
+                gfx.DrawRectangle(XBrushes.White, rect);
+                tf.Alignment = XParagraphAlignment.Left;
+                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                rect = new XRect(313, 684, 288, 72);
+                gfx.DrawRectangle(XBrushes.White, rect);
+                tf.Alignment = XParagraphAlignment.Left;
+                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                const string filename = "Barcodes.pdf";
+                document.Save(filename);
+                Process.Start(filename);
             }
             catch (Exception exp)
             {
