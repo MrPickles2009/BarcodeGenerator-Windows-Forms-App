@@ -1,9 +1,4 @@
-﻿using PdfSharp.Drawing;
-using PdfSharp.Drawing.Layout;
-using PdfSharp.Pdf;
-using System;
-using System.Diagnostics;
-using System.IO;
+﻿using System;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -11,13 +6,11 @@ namespace BarcodeGenerator
 {
     public partial class Form1 : Form
     {
-        public object rangeCounted;
         public Form1()
         {
             InitializeComponent();
             barcodeRange1.SelectedItem = barcodeRange1.Top;
             barcodeRange2.SelectedItem = barcodeRange2.Top;
-            rangeCounted = rangeCount.Text;
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -36,7 +29,7 @@ namespace BarcodeGenerator
 
                 try
                 {
-                    Avery5161pdf.PdfGen();
+                    Avery5161pdf.PdfGen(rangeCount.Text);
                 }
                 catch (Exception exp)
                 {

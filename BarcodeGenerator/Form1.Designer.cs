@@ -231,7 +231,7 @@
         private System.Windows.Forms.ComboBox barcodeRange2;
         private System.Windows.Forms.Label lastRange1;
         private System.Windows.Forms.Label lastRange2;
-        private System.Windows.Forms.Label rangeCount;
+        public System.Windows.Forms.Label rangeCount;
         private System.Windows.Forms.Label lastSubmitDate;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
