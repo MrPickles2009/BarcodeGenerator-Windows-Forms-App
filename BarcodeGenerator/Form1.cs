@@ -25,19 +25,26 @@ namespace BarcodeGenerator
                 var barcodeUrl = $"barcode.tec-it.com/barcode.ashx?translate-esc=off&data={barcodeData}&code=UPCA&authentication=None&ssid=Networkname&password=&unit=Fit&dpi=96&imagetype=Gif&rotation=0&color=000000&bgcolor=FFFFFF&qunit=Mm&quiet=0&eclevel=L";
 
                 int r1 = Int32.Parse($"{barcodeRange1.SelectedItem}");
-                var rangeValues = Enumerable.Range(r1, Int32.Parse(rangeCount.Text));
-
                 try
                 {
-                    Avery5161pdf.PdfGen(rangeCount.Text);
+                    var rangeValues = Enumerable.Range(r1, Int32.Parse(rangeCount.Text));
+                    try
+                    {
+                        Avery5161pdf.PdfGen(rangeCount.Text);
+                    }
+                    catch (Exception exp)
+                    {
+                        MessageBox.Show(exp.Message);
+                    }
+                    lastSubmitDate.Text = $"{DateTime.Now}";
+                    lastRange1.Text = $"{Convert.ToInt32(barcodeRange1.SelectedItem)}";
+                    lastRange2.Text = $"{Convert.ToInt32(barcodeRange2.SelectedItem)}";
                 }
-                catch (Exception exp)
+                
+                catch
                 {
-                    MessageBox.Show(exp.Message);
+                    MessageBox.Show("Range cannot be negative", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                lastSubmitDate.Text = $"{DateTime.Now}";
-                lastRange1.Text = $"{Convert.ToInt32(barcodeRange1.SelectedItem)}";
-                lastRange2.Text = $"{Convert.ToInt32(barcodeRange2.SelectedItem)}";
             }
         }
 
