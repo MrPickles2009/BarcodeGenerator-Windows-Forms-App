@@ -29,1095 +29,1078 @@ namespace BarcodeGenerator
             XRect rect;
             int barcodeCount = int.Parse(rangeCount);
 
-            if (barcodeCount == 1)
+            switch (barcodeCount)
             {
-                rect = new XRect(12, 36, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-            }
-            else if (barcodeCount == 2)
-            {
-                rect = new XRect(12, 36, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 108, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-            }
-            else if (barcodeCount == 3)
-            {
-                rect = new XRect(12, 36, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 108, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 180, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-            }
-            else if (barcodeCount == 4)
-            {
-                rect = new XRect(12, 36, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 108, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 180, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 252, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-            }
-            else if (barcodeCount == 5)
-            {
-                rect = new XRect(12, 36, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 108, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 180, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 252, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 324, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-            }
-            else if (barcodeCount == 6)
-            {
-                rect = new XRect(12, 36, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 108, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 180, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 252, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 324, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 396, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-            }
-            else if (barcodeCount == 7)
-            {
-                rect = new XRect(12, 36, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 108, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 180, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 252, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 324, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 396, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 468, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-            }
-            else if (barcodeCount == 8)
-            {
-                rect = new XRect(12, 36, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 108, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 180, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 252, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 324, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 396, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 468, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 540, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-            }
-            else if (barcodeCount == 9)
-            {
-                rect = new XRect(12, 36, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 108, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 180, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 252, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 324, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 396, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 468, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 540, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 612, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-            }
-            else if (barcodeCount == 10)
-            {
-                rect = new XRect(12, 36, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 108, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 180, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 252, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 324, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 396, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 468, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 540, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 612, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 684, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-            }
-            else if (barcodeCount == 11)
-            {
-                rect = new XRect(12, 36, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 108, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 180, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 252, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 324, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 396, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 468, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 540, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 612, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 684, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 36, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-            }
-            else if (barcodeCount == 12)
-            {
-                rect = new XRect(12, 36, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 108, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 180, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 252, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 324, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 396, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 468, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 540, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 612, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 684, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 36, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 108, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-            }
-            else if (barcodeCount == 13)
-            {
-                rect = new XRect(12, 36, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 108, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 180, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 252, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 324, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 396, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 468, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 540, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 612, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 684, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 36, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 108, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 180, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-            }
-            else if (barcodeCount == 14)
-            {
-                rect = new XRect(12, 36, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 108, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 180, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 252, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 324, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 396, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 468, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 540, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 612, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 684, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 36, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 108, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 180, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 252, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-            }
-            else if (barcodeCount == 15)
-            {
-                rect = new XRect(12, 36, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 108, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 180, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 252, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 324, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 396, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 468, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 540, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 612, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 684, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 36, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 108, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 180, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 252, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 324, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-            }
-            else if (barcodeCount == 16)
-            {
-                rect = new XRect(12, 36, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 108, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 180, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 252, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 324, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 396, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 468, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 540, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 612, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 684, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 36, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 108, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 180, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 252, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 324, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 396, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-            }
-            else if (barcodeCount == 17)
-            {
-                rect = new XRect(12, 36, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 108, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 180, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 252, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 324, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 396, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 468, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 540, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 612, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 684, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 36, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 108, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 180, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 252, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 324, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 396, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 468, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-            }
-            else if (barcodeCount == 18)
-            {
-                rect = new XRect(12, 36, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 108, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 180, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 252, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 324, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 396, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 468, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 540, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 612, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 684, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 36, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 108, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 180, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 252, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 324, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 396, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 468, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 540, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-            }
-            else if (barcodeCount == 19)
-            {
-                rect = new XRect(12, 36, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 108, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 180, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 252, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 324, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 396, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 468, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 540, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 612, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 684, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 36, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 108, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 180, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 252, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 324, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 396, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 468, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 540, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 612, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-            }
-            else if (barcodeCount == 20)
-            {
-                rect = new XRect(12, 36, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 108, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 180, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 252, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 324, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 396, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 468, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 540, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 612, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(12, 684, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 36, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 108, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 180, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 252, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 324, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 396, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 468, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 540, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 612, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-
-                rect = new XRect(313, 684, 288, 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+                case 1:
+                    rect = new XRect(12, 36, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+                    break;
+                case 2:
+                    rect = new XRect(12, 36, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 108, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+                    break;
+                case 3:
+                    rect = new XRect(12, 36, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 108, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 180, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+                    break;
+                case 4:
+                    rect = new XRect(12, 36, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 108, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 180, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 252, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+                    break;
+                case 5:
+                    rect = new XRect(12, 36, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 108, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 180, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 252, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 324, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+                    break;
+                case 6:
+                    rect = new XRect(12, 36, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 108, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 180, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 252, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 324, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 396, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+                    break;
+                case 7:
+                    rect = new XRect(12, 36, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 108, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 180, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 252, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 324, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 396, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 468, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+                    break;
+                case 8:
+                    rect = new XRect(12, 36, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 108, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 180, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 252, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 324, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 396, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 468, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 540, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+                    break;
+                case 9:
+                    rect = new XRect(12, 36, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 108, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 180, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 252, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 324, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 396, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 468, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 540, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 612, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+                    break;
+                case 10:
+                    rect = new XRect(12, 36, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 108, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 180, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 252, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 324, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 396, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 468, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 540, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 612, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 684, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+                    break;
+                case 11:
+                    rect = new XRect(12, 36, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 108, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 180, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 252, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 324, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 396, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 468, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 540, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 612, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 684, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 36, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+                    break;
+                case 12:
+                    rect = new XRect(12, 36, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 108, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 180, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 252, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 324, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 396, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 468, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 540, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 612, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 684, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 36, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 108, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+                    break;
+                case 13:
+                    rect = new XRect(12, 36, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 108, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 180, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 252, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 324, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 396, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 468, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 540, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 612, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 684, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 36, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 108, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 180, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+                    break;
+                case 14:
+                    rect = new XRect(12, 36, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 108, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 180, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 252, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 324, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 396, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 468, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 540, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 612, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 684, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 36, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 108, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 180, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 252, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+                    break;
+                case 15:
+                    rect = new XRect(12, 36, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 108, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 180, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 252, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 324, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 396, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 468, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 540, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 612, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 684, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 36, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 108, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 180, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 252, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 324, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+                    break;
+                case 16:
+                    rect = new XRect(12, 36, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 108, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 180, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 252, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 324, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 396, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 468, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 540, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 612, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 684, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 36, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 108, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 180, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 252, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 324, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 396, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+                    break;
+                case 17:
+                    rect = new XRect(12, 36, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 108, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 180, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 252, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 324, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 396, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 468, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 540, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 612, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 684, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 36, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 108, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 180, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 252, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 324, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 396, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 468, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+                    break;
+                case 18:
+                    rect = new XRect(12, 36, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 108, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 180, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 252, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 324, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 396, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 468, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 540, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 612, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 684, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 36, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 108, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 180, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 252, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 324, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 396, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 468, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 540, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+                    break;
+                case 19:
+                    rect = new XRect(12, 36, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 108, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 180, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 252, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 324, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 396, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 468, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 540, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 612, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 684, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 36, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 108, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 180, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 252, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 324, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 396, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 468, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 540, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 612, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+                    break;
+                case 20:
+                    rect = new XRect(12, 36, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 108, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 180, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 252, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 324, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 396, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 468, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 540, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 612, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(12, 684, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 36, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 108, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 180, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 252, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 324, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 396, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 468, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 540, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 612, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+
+                    rect = new XRect(313, 684, 288, 72);
+                    gfx.DrawRectangle(XBrushes.White, rect);
+                    tf.Alignment = XParagraphAlignment.Left;
+                    tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
+                    break;
             }
 
             const string filename = "Barcodes.pdf";
