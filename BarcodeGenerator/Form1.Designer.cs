@@ -57,26 +57,26 @@
             this.barcodeRange1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.barcodeRange1.FormattingEnabled = true;
             this.barcodeRange1.Items.AddRange(new object[] {
-            "51000001849",
-            "51000001850",
-            "51000001851",
-            "51000001852",
-            "51000001853",
-            "51000001854",
-            "51000001855",
-            "51000001856",
-            "51000001857",
-            "51000001858",
-            "51000001859",
-            "51000001860",
-            "51000001861",
-            "51000001862",
-            "51000001863",
-            "51000001864",
-            "51000001865",
-            "51000001866",
-            "51000001867",
-            "51000001868"});
+            "1000001849",
+            "1000001850",
+            "1000001851",
+            "1000001852",
+            "1000001853",
+            "1000001854",
+            "1000001855",
+            "1000001856",
+            "1000001857",
+            "1000001858",
+            "1000001859",
+            "1000001860",
+            "1000001861",
+            "1000001862",
+            "1000001863",
+            "1000001864",
+            "1000001865",
+            "1000001866",
+            "1000001867",
+            "1000001868"});
             this.barcodeRange1.Location = new System.Drawing.Point(191, 105);
             this.barcodeRange1.Name = "barcodeRange1";
             this.barcodeRange1.Size = new System.Drawing.Size(121, 150);
@@ -88,26 +88,26 @@
             this.barcodeRange2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.barcodeRange2.FormattingEnabled = true;
             this.barcodeRange2.Items.AddRange(new object[] {
-            "51000001849",
-            "51000001850",
-            "51000001851",
-            "51000001852",
-            "51000001853",
-            "51000001854",
-            "51000001855",
-            "51000001856",
-            "51000001857",
-            "51000001858",
-            "51000001859",
-            "51000001860",
-            "51000001861",
-            "51000001862",
-            "51000001863",
-            "51000001864",
-            "51000001865",
-            "51000001866",
-            "51000001867",
-            "51000001868"});
+            "1000001849",
+            "1000001850",
+            "1000001851",
+            "1000001852",
+            "1000001853",
+            "1000001854",
+            "1000001855",
+            "1000001856",
+            "1000001857",
+            "1000001858",
+            "1000001859",
+            "1000001860",
+            "1000001861",
+            "1000001862",
+            "1000001863",
+            "1000001864",
+            "1000001865",
+            "1000001866",
+            "1000001867",
+            "1000001868"});
             this.barcodeRange2.Location = new System.Drawing.Point(362, 105);
             this.barcodeRange2.Name = "barcodeRange2";
             this.barcodeRange2.Size = new System.Drawing.Size(121, 150);
@@ -119,19 +119,19 @@
             this.lastRange1.AutoSize = true;
             this.lastRange1.Location = new System.Drawing.Point(293, 388);
             this.lastRange1.Name = "lastRange1";
-            this.lastRange1.Size = new System.Drawing.Size(73, 13);
+            this.lastRange1.Size = new System.Drawing.Size(67, 13);
             this.lastRange1.TabIndex = 7;
-            this.lastRange1.Text = "51000001839";
+            this.lastRange1.Text = "1000001839";
             this.lastRange1.Click += new System.EventHandler(this.LastRange1_Click);
             // 
             // lastRange2
             // 
             this.lastRange2.AutoSize = true;
-            this.lastRange2.Location = new System.Drawing.Point(394, 388);
+            this.lastRange2.Location = new System.Drawing.Point(388, 388);
             this.lastRange2.Name = "lastRange2";
-            this.lastRange2.Size = new System.Drawing.Size(73, 13);
+            this.lastRange2.Size = new System.Drawing.Size(67, 13);
             this.lastRange2.TabIndex = 11;
-            this.lastRange2.Text = "51000001848";
+            this.lastRange2.Text = "1000001848";
             this.lastRange2.Click += new System.EventHandler(this.LastRange2_Click);
             // 
             // rangeCount
@@ -188,7 +188,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(372, 388);
+            this.label4.Location = new System.Drawing.Point(366, 388);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(16, 13);
             this.label4.TabIndex = 13;

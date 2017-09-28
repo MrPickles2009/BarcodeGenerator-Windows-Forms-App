@@ -23,10 +23,11 @@ namespace BarcodeGenerator
             XFont titleFont = new XFont("Verdana", 20, XFontStyle.Underline);
             XFont barcodeFont = new XFont("Verdana", 14, XFontStyle.Regular);
             gfx.DrawString("Barcodes", titleFont, XBrushes.Black, new XRect(0, 0, page.Width, page.Height), XStringFormats.TopCenter);
-            //for (int i = 0; i < Int32.Parse(rangeCount.Text); i++)
-            //{
-            //    gfx.DrawString("I am a barcode", barcodeFont, XBrushes.Black, new XRect(0, 0, page.Width, page.Height), XStringFormats.Center);
-            //}
+
+            for (int i = 0; i < 5/*Int32.Parse(Form1.rangeCounted.Text)*/; i++)
+            {
+                gfx.DrawString("I am a barcode", barcodeFont, XBrushes.Black, new XRect(0, 0, page.Width, page.Height), XStringFormats.Center);
+            }
 
             //US Letter Page Dimensions: 612 * 792
             string text = "I am a barcode";
