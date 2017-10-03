@@ -44,6 +44,7 @@ namespace BarcodeGenerator
                     val2 += 72;
                 }
                 val1 = 313;
+                val2 = 36;
             }
 
             const string filename = "Barcodes.pdf";
