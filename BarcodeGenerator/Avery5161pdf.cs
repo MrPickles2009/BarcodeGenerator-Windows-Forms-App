@@ -32,6 +32,11 @@ namespace BarcodeGenerator
             int val2 = 36;
             int barcodeCountLessTen = (barcodeCount - 10);
 
+            if (barcodeCount > 10)
+            {
+                barcodeCount = 10;
+            }
+
             for (int i = 0; i < barcodeCount; i++)
             {
                 rect = new XRect(x: val1, y: val2, width: 288, height: 72);
@@ -40,6 +45,8 @@ namespace BarcodeGenerator
                 tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
                 val2 += 72;
             }
+
+            barcodeCount = int.Parse(rangeCount);
 
             if (barcodeCount > 10)
             {
@@ -55,7 +62,6 @@ namespace BarcodeGenerator
                     val2 += 72;
                 }
             }
-
 
             const string filename = "Barcodes.pdf";
             document.Save(filename);
