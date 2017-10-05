@@ -9,8 +9,6 @@ namespace BarcodeGenerator
         public Form1()
         {
             InitializeComponent();
-            barcodeRange1.SelectedItem = barcodeRange1.Top;
-            barcodeRange2.SelectedItem = barcodeRange2.Top;
         }
         private void Form1_Load(object sender, EventArgs e)
         {
