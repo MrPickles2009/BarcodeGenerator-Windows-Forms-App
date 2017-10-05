@@ -28,41 +28,23 @@ namespace BarcodeGenerator
             string text = "I am a barcode";
             XRect rect;
             int barcodeCount = int.Parse(rangeCount);
-            int val1 = 12;
-            int val2 = 36;
-            int barcodeCountLessTen = (barcodeCount - 10);
+			int barcodeCountDivTen = (barcodeCount/10 )+1;
+			int val1=12;
+            int val2=36;
 
-            if (barcodeCount > 10)
-            {
-                barcodeCount = 10;
-            }
-
-            for (int i = 0; i < barcodeCount; i++)
-            {
-                rect = new XRect(x: val1, y: val2, width: 288, height: 72);
-                gfx.DrawRectangle(XBrushes.White, rect);
-                tf.Alignment = XParagraphAlignment.Left;
-                tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-                val2 += 72;
-            }
-
-            barcodeCount = int.Parse(rangeCount);
-
-            if (barcodeCount > 10)
-            {
-                val1 = 313;
-                val2 = 36;
-
-                for (int i = 0; i < barcodeCountLessTen; i++)
-                {
-                    rect = new XRect(x: val1, y: val2, width: 288, height: 72);
+			for(int j=0; j<barcodeCountDivTen; j++)
+			{
+				for (int i =0; i<barcodeCount; i++)
+				{
+					rect = new XRect(12, val2, 288, 72);
                     gfx.DrawRectangle(XBrushes.White, rect);
                     tf.Alignment = XParagraphAlignment.Left;
                     tf.DrawString(text, barcodeFont, XBrushes.Black, rect, XStringFormats.TopLeft);
-                    val2 += 72;
-                }
+					val2+=72;
+				}
+				val1+=301;
+				barcodeCount-=10;
             }
-
             const string filename = "Barcodes.pdf";
             document.Save(filename);
             Process.Start(filename);
