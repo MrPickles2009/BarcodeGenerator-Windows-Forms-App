@@ -119,20 +119,16 @@
             this.lastRange1.AutoSize = true;
             this.lastRange1.Location = new System.Drawing.Point(293, 388);
             this.lastRange1.Name = "lastRange1";
-            this.lastRange1.Size = new System.Drawing.Size(67, 13);
+            this.lastRange1.Size = new System.Drawing.Size(0, 13);
             this.lastRange1.TabIndex = 7;
-            this.lastRange1.Text = "1000001839";
-            this.lastRange1.Click += new System.EventHandler(this.LastRange1_Click);
             // 
             // lastRange2
             // 
             this.lastRange2.AutoSize = true;
             this.lastRange2.Location = new System.Drawing.Point(388, 388);
             this.lastRange2.Name = "lastRange2";
-            this.lastRange2.Size = new System.Drawing.Size(67, 13);
+            this.lastRange2.Size = new System.Drawing.Size(0, 13);
             this.lastRange2.TabIndex = 11;
-            this.lastRange2.Text = "1000001848";
-            this.lastRange2.Click += new System.EventHandler(this.LastRange2_Click);
             // 
             // rangeCount
             // 
@@ -142,17 +138,14 @@
             this.rangeCount.Size = new System.Drawing.Size(13, 13);
             this.rangeCount.TabIndex = 10;
             this.rangeCount.Text = "0";
-            this.rangeCount.Click += new System.EventHandler(this.RangeCount_Click);
             // 
             // lastSubmitDate
             // 
             this.lastSubmitDate.AutoSize = true;
             this.lastSubmitDate.Location = new System.Drawing.Point(293, 375);
             this.lastSubmitDate.Name = "lastSubmitDate";
-            this.lastSubmitDate.Size = new System.Drawing.Size(110, 13);
+            this.lastSubmitDate.Size = new System.Drawing.Size(0, 13);
             this.lastSubmitDate.TabIndex = 12;
-            this.lastSubmitDate.Text = "13/09/2017 10:00:50";
-            this.lastSubmitDate.Click += new System.EventHandler(this.LastSubmitDate_Click);
             // 
             // label1
             // 
@@ -162,7 +155,6 @@
             this.label1.Size = new System.Drawing.Size(127, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "Enter Range of Barcodes";
-            this.label1.Click += new System.EventHandler(this.Label1_Click);
             // 
             // label2
             // 
@@ -172,7 +164,6 @@
             this.label2.Size = new System.Drawing.Size(51, 13);
             this.label2.TabIndex = 14;
             this.label2.Text = "barcodes";
-            this.label2.Click += new System.EventHandler(this.Label2_Click);
             // 
             // label3
             // 
@@ -183,7 +174,6 @@
             this.label3.TabIndex = 9;
             this.label3.Text = "Last range entered:\r\nRange:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label3.Click += new System.EventHandler(this.Label3_Click);
             // 
             // label4
             // 
@@ -193,7 +183,6 @@
             this.label4.Size = new System.Drawing.Size(16, 13);
             this.label4.TabIndex = 13;
             this.label4.Text = "to";
-            this.label4.Click += new System.EventHandler(this.Label4_Click);
             // 
             // Form1
             // 

@@ -1,18 +1,43 @@
 ﻿using System;
+using System.Text;
 using System.Linq;
 using System.Windows.Forms;
+using System.Configuration;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace BarcodeGenerator
 {
     public partial class Form1 : Form
     {
+        SqlConnection connection;
+        string connectionString;
+
         public Form1()
         {
             InitializeComponent();
+
+            connectionString = ConfigurationManager.ConnectionStrings["BarcodeGenerator.Properties.Settings.LastInfoCacheConnectionString"].ConnectionString;
         }
         private void Form1_Load(object sender, EventArgs e)
         {
+            LastInfoData();
+        }
 
+        private void LastInfoData()
+        {
+            using (connection = new SqlConnection(connectionString))
+            using (SqlDataAdapter adapter = new SqlDataAdapter("SELECT LastDate FROM LastInfoCache", connection))
+            {
+                DataTable LastInfoCacheTable = new DataTable();
+                adapter.Fill(LastInfoCacheTable);
+
+                var a = LastInfoCacheTable.Rows;
+
+                lastSubmitDate.Text = "13/09/2017 10:00:50";
+                lastRange1.Text = "1000001839";
+                lastRange2.Text = "1000001848";
+            }
         }
 
         private void SubmitButton_Click(object sender, EventArgs e)
@@ -60,46 +85,6 @@ namespace BarcodeGenerator
             {
                 rangeCount.Text = $"{Convert.ToInt32(barcodeRange2.SelectedItem) - Convert.ToInt32(barcodeRange1.SelectedItem) + 1}";
             }
-        }
-
-        private void LastRange1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LastRange2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void RangeCount_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LastSubmitDate_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label4_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
