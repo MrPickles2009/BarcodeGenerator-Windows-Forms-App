@@ -21,22 +21,41 @@ namespace BarcodeGenerator
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            LastInfoData();
+            PopulateCachedInfo();
         }
 
-        private void LastInfoData()
+        private void PopulateCachedInfo()
         {
+            string query = "SELECT * FROM LastInfoCache";
+
             using (connection = new SqlConnection(connectionString))
-            using (SqlDataAdapter adapter = new SqlDataAdapter("SELECT LastDate FROM LastInfoCache", connection))
+            using (SqlDataAdapter adapter = new SqlDataAdapter(query, connection))
             {
-                DataTable LastInfoCacheTable = new DataTable();
-                adapter.Fill(LastInfoCacheTable);
+                DataTable cachedInfoTable = new DataTable();
+                adapter.Fill(cachedInfoTable);
+                
+                lastSubmitDate.Text = "@LastDate";
+                lastRange1.Text = "@LastRange1";
+                lastRange2.Text = "@LastRange2";
+            }
+        }
 
-                var a = LastInfoCacheTable.Rows;
+        private void CacheCurrentInfo()
+        {
+            string query = "UPDATE LastInfoCache " +
+                        "SET LastDate = @LastDate, LastRange1 = @LastRange1, LastRange2 = @LastRange2 " +
+                        "WHERE Id = 1";
 
-                lastSubmitDate.Text = "13/09/2017 10:00:50";
-                lastRange1.Text = "1000001839";
-                lastRange2.Text = "1000001848";
+            using (connection = new SqlConnection(connectionString))
+            using (SqlCommand command = new SqlCommand(query, connection))
+            {
+                connection.Open();
+
+                command.Parameters.AddWithValue("@LastDate", $"{DateTime.Now}");
+                command.Parameters.AddWithValue("@LastRange1", $"{Convert.ToInt32(barcodeRange1.SelectedItem)}");
+                command.Parameters.AddWithValue("@LastRange2", $"{Convert.ToInt32(barcodeRange2.SelectedItem)}");
+
+                command.ExecuteScalar();
             }
         }
 
@@ -48,6 +67,12 @@ namespace BarcodeGenerator
                 var barcodeUrl = $"barcode.tec-it.com/barcode.ashx?translate-esc=off&data={barcodeData}&code=UPCA&authentication=None&ssid=Networkname&password=&unit=Fit&dpi=96&imagetype=Gif&rotation=0&color=000000&bgcolor=FFFFFF&qunit=Mm&quiet=0&eclevel=L";
 
                 int r1 = Int32.Parse($"{barcodeRange1.SelectedItem}");
+
+                lastSubmitDate.Text = $"{DateTime.Now}";
+                lastRange1.Text = $"{Convert.ToInt32(barcodeRange1.SelectedItem)}";
+                lastRange2.Text = $"{Convert.ToInt32(barcodeRange2.SelectedItem)}";
+
+
                 try
                 {
                     var rangeValues = Enumerable.Range(r1, Int32.Parse(rangeCount.Text));
@@ -59,14 +84,19 @@ namespace BarcodeGenerator
                     {
                         MessageBox.Show(exp.Message);
                     }
-                    lastSubmitDate.Text = $"{DateTime.Now}";
-                    lastRange1.Text = $"{Convert.ToInt32(barcodeRange1.SelectedItem)}";
-                    lastRange2.Text = $"{Convert.ToInt32(barcodeRange2.SelectedItem)}";
                 }
                 
                 catch
                 {
                     MessageBox.Show("Range cannot be negative", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                try
+                {
+                    //CacheCurrentInfo();
+                }
+                catch (Exception exp)
+                {
+                    MessageBox.Show(exp.Message);
                 }
             }
         }
