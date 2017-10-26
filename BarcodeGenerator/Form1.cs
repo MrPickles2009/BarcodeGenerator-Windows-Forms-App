@@ -33,10 +33,10 @@ namespace BarcodeGenerator
             {
                 DataTable cachedInfoTable = new DataTable();
                 adapter.Fill(cachedInfoTable);
-                
-                lastSubmitDate.Text = "@LastDate";
-                lastRange1.Text = "@LastRange1";
-                lastRange2.Text = "@LastRange2";
+
+                lastSubmitDate.Text = $"{cachedInfoTable.Container}";
+                lastRange1.Text = $"{cachedInfoTable.Container}";
+                lastRange2.Text = $"{cachedInfoTable.Container}";
             }
         }
 
@@ -65,9 +65,7 @@ namespace BarcodeGenerator
             {
                 object barcodeData = $"{Convert.ToInt64(barcodeRange1.SelectedItem) + Convert.ToInt64(50000000000)}";
                 var barcodeUrl = $"barcode.tec-it.com/barcode.ashx?translate-esc=off&data={barcodeData}&code=UPCA&authentication=None&ssid=Networkname&password=&unit=Fit&dpi=96&imagetype=Gif&rotation=0&color=000000&bgcolor=FFFFFF&qunit=Mm&quiet=0&eclevel=L";
-
-                int r1 = Int32.Parse($"{barcodeRange1.SelectedItem}");
-
+                
                 lastSubmitDate.Text = $"{DateTime.Now}";
                 lastRange1.Text = $"{Convert.ToInt32(barcodeRange1.SelectedItem)}";
                 lastRange2.Text = $"{Convert.ToInt32(barcodeRange2.SelectedItem)}";
@@ -75,10 +73,9 @@ namespace BarcodeGenerator
 
                 try
                 {
-                    var rangeValues = Enumerable.Range(r1, Int32.Parse(rangeCount.Text));
                     try
                     {
-                        Avery5161pdf.PdfGen(rangeCount.Text);
+                        Avery5161pdf.PdfGen(rangeCount.Text, Convert.ToInt32(barcodeRange1.SelectedItem));
                     }
                     catch (Exception exp)
                     {
