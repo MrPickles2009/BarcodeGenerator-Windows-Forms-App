@@ -18,7 +18,7 @@ namespace BarcodeGenerator
             XGraphics gfx = XGraphics.FromPdfPage(page);
             XTextFormatter tf = new XTextFormatter(gfx);
             XFont titleFont = new XFont("Verdana", 20, XFontStyle.Underline);
-            XFont barcodeFont = new XFont("UPC-A", 46, XFontStyle.Regular);
+            XFont barcodeFont = new XFont("UPC-A", 40, XFontStyle.Regular);
             gfx.DrawString("Barcodes", titleFont, XBrushes.Black, new XRect(0, 0, page.Width, page.Height), XStringFormats.TopCenter);
 
             //US Letter Page Dimensions: 612 * 792
@@ -29,7 +29,7 @@ namespace BarcodeGenerator
             XRect rect;
             int barcodeCount = int.Parse(rangeCount);
             int barcodeCountDivTen = (barcodeCount / 10) + 1;
-            int val1 = 12;
+            int val1 = 18;
             int val2 = 36;
             int k = 0;
 
@@ -48,7 +48,7 @@ namespace BarcodeGenerator
                     val2 += 72;
                 }
                 val2 = 36;
-                val1 += 301;
+                val1 += 305;
                 barcodeCount -= 10;
             }
             const string filename = "Barcodes.pdf";
