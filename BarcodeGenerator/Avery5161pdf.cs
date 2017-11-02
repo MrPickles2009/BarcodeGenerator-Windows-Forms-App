@@ -3,9 +3,7 @@ using PdfSharp.Drawing.Layout;
 using PdfSharp.Pdf;
 using System;
 using System.Diagnostics;
-using System.Drawing.Text;
 using System.Linq;
-using System.Runtime.InteropServices;
 
 namespace BarcodeGenerator
 {
@@ -33,12 +31,19 @@ namespace BarcodeGenerator
             int barcodeCountDivTen = (barcodeCount / 10) + 1;
             int val1 = 12;
             int val2 = 36;
+            int k = 0;
 
             for (int j = 0; j < barcodeCountDivTen; j++)
             {
                 for (int i = 0; ((i < barcodeCount) && (i < 10)); i++)
                 {
-                    string text = $"{rangeValues[i]}";
+                    k = i;
+                    if (j > 0)
+                    {
+                        k = i + 10;
+                    }
+                    
+                    string text = $"{rangeValues[k]}";
                     rect = new XRect(val1, val2, 288, 72);
                     gfx.DrawRectangle(XBrushes.White, rect);
                     tf.Alignment = XParagraphAlignment.Left;
