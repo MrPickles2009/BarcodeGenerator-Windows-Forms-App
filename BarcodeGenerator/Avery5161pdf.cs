@@ -38,12 +38,9 @@ namespace BarcodeGenerator
                 for (int i = 0; ((i < barcodeCount) && (i < 10)); i++)
                 {
                     k = i;
-                    if (j > 0)
-                    {
-                        k = i + 10;
-                    }
+                    if (j > 0) { k = i + 10; }
                     
-                    string text = $"{rangeValues[k]}";
+                    string text = $"{Convert.ToInt64(50000000000) + rangeValues[k]}";
                     rect = new XRect(val1, val2, 288, 72);
                     gfx.DrawRectangle(XBrushes.White, rect);
                     tf.Alignment = XParagraphAlignment.Left;

@@ -3,6 +3,6 @@ A simple multiple barcode generator for James Madison University [EFEX](http://w
 
 ### Using:
 - [__PDFsharp__](http://www.pdfsharp.net/NuGetPackage_PDFsharp-GDI.ashx) to generate the printable PDFs
-- [__TEC-IT Online Barcode generator__](https://barcode.tec-it.com/en/UPCA?data=51000001848) to create the range of barcodes (for now at least)
+- [__UPC-A barcode font__](http://www.fontpalace.com/font-download/UPC-A/) to create the barcodes (for now at least)
 
 [![](./AppLayout.png)](https://github.com/MrPickles2009/BarcodeGenerator-Windows-Forms-App)

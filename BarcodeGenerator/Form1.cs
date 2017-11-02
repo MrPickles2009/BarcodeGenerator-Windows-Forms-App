@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Text;
-using System.Linq;
-using System.Windows.Forms;
 using System.Configuration;
-using System.Data.SqlClient;
 using System.Data;
+using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace BarcodeGenerator
 {
@@ -63,9 +61,6 @@ namespace BarcodeGenerator
         {
             if (barcodeRange1.SelectedItem != null && barcodeRange2.SelectedItem != null)
             {
-                object barcodeData = $"{Convert.ToInt64(barcodeRange1.SelectedItem) + Convert.ToInt64(50000000000)}";
-                var barcodeUrl = $"barcode.tec-it.com/barcode.ashx?translate-esc=off&data={barcodeData}&code=UPCA&authentication=None&ssid=Networkname&password=&unit=Fit&dpi=96&imagetype=Gif&rotation=0&color=000000&bgcolor=FFFFFF&qunit=Mm&quiet=0&eclevel=L";
-                
                 lastSubmitDate.Text = $"{DateTime.Now}";
                 lastRange1.Text = $"{Convert.ToInt32(barcodeRange1.SelectedItem)}";
                 lastRange2.Text = $"{Convert.ToInt32(barcodeRange2.SelectedItem)}";
