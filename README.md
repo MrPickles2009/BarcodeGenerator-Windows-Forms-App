@@ -7,5 +7,5 @@ A simple multiple barcode generator for James Madison University [EFEX](http://w
 
 <a href="http://educ.jmu.edu/~gilliabb/Inbox/BarcodeGeneratorSetup.msi"><img src="./install.png"></img></a>
 
-[![](./AppLayout.png)](https://github.com/MrPickles2009/BarcodeGenerator-Windows-Forms-App)
+[![](./AppLayout.png)](https://github.com/MrPickles2009/BarcodeGenerator-Windows-Forms-App#readme)
 
