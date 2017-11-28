@@ -51,7 +51,7 @@ namespace BarcodeGenerator
                 val1 += 305;
                 barcodeCount -= 10;
             }
-            const string filename = "Barcodes.pdf";
+            string filename = $"{Environment.GetFolderPath(Environment.SpecialFolder.Desktop)}" + "/Barcodes.pdf";
             document.Save(filename);
             Process.Start(filename);
         }

@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.15
+VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BarcodeGenerator", "BarcodeGenerator\BarcodeGenerator.csproj", "{3D826E8D-89D8-4494-8294-B0E6C767B8C4}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{04E2E3DD-39A4-4622-9C47-BC6428B4DE33}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,12 @@ Global
 		{3D826E8D-89D8-4494-8294-B0E6C767B8C4}.Release|x64.Build.0 = Release|x64
 		{3D826E8D-89D8-4494-8294-B0E6C767B8C4}.Release|x86.ActiveCfg = Release|x86
 		{3D826E8D-89D8-4494-8294-B0E6C767B8C4}.Release|x86.Build.0 = Release|x86
+		{04E2E3DD-39A4-4622-9C47-BC6428B4DE33}.Debug|Any CPU.ActiveCfg = Debug
+		{04E2E3DD-39A4-4622-9C47-BC6428B4DE33}.Debug|x64.ActiveCfg = Debug
+		{04E2E3DD-39A4-4622-9C47-BC6428B4DE33}.Debug|x86.ActiveCfg = Debug
+		{04E2E3DD-39A4-4622-9C47-BC6428B4DE33}.Release|Any CPU.ActiveCfg = Release
+		{04E2E3DD-39A4-4622-9C47-BC6428B4DE33}.Release|x64.ActiveCfg = Release
+		{04E2E3DD-39A4-4622-9C47-BC6428B4DE33}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

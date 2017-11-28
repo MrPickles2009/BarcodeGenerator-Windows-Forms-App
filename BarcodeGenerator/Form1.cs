@@ -19,7 +19,7 @@ namespace BarcodeGenerator
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            PopulateCachedInfo();
+            //PopulateCachedInfo();
         }
 
         private void PopulateCachedInfo()

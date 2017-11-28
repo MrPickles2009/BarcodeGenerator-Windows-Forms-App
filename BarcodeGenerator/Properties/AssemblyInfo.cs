@@ -7,11 +7,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Barcode Generator")]
-[assembly: AssemblyDescription("Easily generate a range of barcodes")]
+[assembly: AssemblyDescription("Easily generate a range of barcodes in UPC-A format")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Benjamin Gilliam")]
 [assembly: AssemblyProduct("Barcode Generator")]
-[assembly: AssemblyCopyright("Copyright ©  2017")]
+[assembly: AssemblyCopyright("Copyright © Benjamin Gilliam 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
