@@ -1,4 +1,14 @@
 # Windows Forms App Multiple Barcode Generator
+
+<p align="center">
+	<a href="https://github.com/MrPickles2009/BarcodeGenerator-Windows-Forms-App" rel="nofollow">
+		<img src="https://img.shields.io/badge/build-passing-brightgreen.svg" alt="Build Status">
+	</a>
+	<a href="https://github.com/MrPickles2009/BarcodeGenerator-Windows-Forms-App/releases">
+		<img src="https://img.shields.io/badge/release-v1.0.0-blue.svg" alt="GitHub release">
+	</a>
+</p>
+
 A simple multiple barcode generator for James Madison University [EFEX](http://www.jmu.edu/coe/efex/)'s lending library
 
 ### Using:
